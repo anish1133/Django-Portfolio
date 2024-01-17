@@ -18,9 +18,29 @@ class ItemUser(admin.ModelAdmin):
 
 @admin.register(models.AboutMe)
 class About(admin.ModelAdmin):
-    list_display = ("title", "title_2", "description_one", "about_avatar")
+    list_display = (
+        "title",
+        "title_2",
+        "description_one",
+        "about_avatar",
+    )
 
 
 @admin.register(models.ServicesOffered)
 class Display_Service(admin.ModelAdmin):
-    list_display = ("icon_image", "service_name", "shadow_icon", "service_description")
+    list_display = (
+        "icon_image",
+        "service_name",
+        "shadow_icon",
+        "service_description",
+    )
+
+
+@admin.register(models.LanguagesSkills)
+class Skills(admin.ModelAdmin):
+    list_display = (
+        "EXP_CHOICES",
+        "icon",
+        "lang_name",
+        "exp_level",
+    )

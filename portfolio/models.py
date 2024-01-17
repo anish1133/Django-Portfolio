@@ -40,3 +40,28 @@ class ServicesOffered(models.Model):
 
     class Meta:
         verbose_name_plural = "Services Section"
+
+
+class LanguagesSkills(models.Model):
+    EXP_CHOICES = (
+        ("Beginner", "Beginner"),
+        ("Junior", "Junior"),
+        ("Intermediate", "Intermediate"),
+        ("Experienced", "Experienced"),
+    )
+
+    icon = models.CharField(
+        max_length=100, blank=True, verbose_name="language Icon Image:(icons8.com)"
+    )
+    lang_name = models.CharField(
+        max_length=100, blank=True, verbose_name="Language Name"
+    )
+    exp_level = models.CharField(
+        max_length=200, blank=True, choices=EXP_CHOICES, verbose_name="Experience Level"
+    )
+
+    class Meta:
+        verbose_name_plural = "Skills Section"
+
+    def __str__(self):
+        return self.lang_name
