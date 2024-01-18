@@ -65,3 +65,56 @@ class LanguagesSkills(models.Model):
 
     def __str__(self):
         return self.lang_name
+
+
+class Project(models.Model):
+    language_used = models.CharField(max_length=100, blank=True, null=True)
+    Project_Image = models.ImageField(blank=True, null=True)
+    updated_on = models.DateTimeField(
+        auto_now_add=False, null=True, auto_now=True, blank=True
+    )
+    Project_title = models.CharField(max_length=90, blank=True, null=True)
+    Project_info = models.TextField(blank=True, null=True)
+    project_link = models.URLField(blank=True, null=True)
+    live_link = models.URLField(blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = "Projects Section"
+
+    def __str__(self):
+        return self.Project_title
+
+
+class MyContact(models.Model):
+    icon = models.CharField(
+        max_length=90, blank=True, null=True, verbose_name="Icon (eg: fa -fa-twitter)"
+    )
+    contact_info = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True,
+        verbose_name="Contact Info (eg: johndoe2@gmail.com)",
+    )
+    social = models.CharField(
+        max_length=30, blank=True, null=True, verbose_name="Contact Name (eg: twitter)"
+    )
+
+    class Meta:
+        verbose_name_plural = "Contacts Section"
+
+    def __str__(self):
+        return self.contact_name
+
+
+class SocialMediaLinks(models.Model):
+    name = models.CharField(max_length=80, blank=True, null=True)
+    link = models.URLField(blank=True, null=True)
+    social_icon = models.CharField(
+        max_length=60, blank=True, null=True, verbose_name="Icon (eg: fa -fa-twitter)"
+    )
+
+    class Meta:
+        verbose_name_plural = "Social Media Links"
+
+    def __str__(self):
+        return self.social_icon

@@ -44,3 +44,34 @@ class Skills(admin.ModelAdmin):
         "lang_name",
         "exp_level",
     )
+
+
+@admin.register(models.Project)
+class Project_View(admin.ModelAdmin):
+    list_display = (
+        "language_used",
+        "Project_Image",
+        "updated_on",
+        "Project_title",
+        "Project_info",
+        "project_link",
+        "live_link",
+    )
+
+
+@admin.register(models.MyContact)
+class Contact(admin.ModelAdmin):
+    list_display = (
+        "icon",
+        "contact_info",
+        "social",
+    )
+
+
+@admin.register(models.SocialMediaLinks)
+class Social(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "link",
+        "social_icon",
+    )
