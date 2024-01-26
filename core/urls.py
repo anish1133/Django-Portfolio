@@ -22,5 +22,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include("portfolio.urls", namespace="portfolio")),
+    path("__reload__/", include("django_browser_reload.urls")),
     path("admin/", admin.site.urls),
 ]
