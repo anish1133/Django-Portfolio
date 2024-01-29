@@ -6,7 +6,7 @@ class UserDetails(models.Model):
     name = models.CharField(max_length=50)
     bio = models.TextField(default="", blank=True)
     job_title = models.CharField(max_length=100, blank=True, null=True)
-    avatar = models.ImageField(upload_to="avatars", blank=True)
+    avatar = models.ImageField(upload_to="", blank=True)
     resume_link = models.URLField(blank=True, null=True)
     hire_me = models.CharField(max_length=255, default="Hire Me")
 
