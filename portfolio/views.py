@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import UserDetails
+from django.apps import AppConfig
 
 
 # Create your views here.

@@ -1,11 +1,44 @@
 {% extends 'base.html' %}
 {% block title %}Pravin Kumar{% endblock %}
 {% block content %}
-  <div class="text-gray-400">
-    {% for user in all_users %}
-      <h1>{{ user.name }}</h1>
-      <h2>{{ user.intro }}</h2>
-      <h3>{{ user.bio }}</h3>
-    {% endfor %}
+<div class="text-gray-400 mt-5">
+  {% for user in all_users %}
+  <h1 class="animate-fadeIn text-3xl font-light text-center mb-5">{{ user.name }}</h1>
+  <h2 class="animate-fadeIn text-xl mb-5 font-light text-center">{{ user.intro }}</h2>
+  <div class="animate-fadeIn container w-2/4 font-light text-xl ml-auto mr-auto px-3 py-3 bg-teal-400">
+    <h3 class="animate-fadeIn">{{ user.bio }}</h3>
   </div>
+  {% endfor %}
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .animate-fadeOut {
+    animation: fadeOut 2s ease-in-out;
+  }
+</style>
+
 {% endblock %}
