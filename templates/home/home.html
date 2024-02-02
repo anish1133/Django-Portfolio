@@ -1,44 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}Pravin Kumar{% endblock %}
 {% block content %}
-<div class="text-gray-400 mt-5">
-  {% for user in all_users %}
-  <h1 class="animate-fadeIn text-3xl font-light text-center mb-5">{{ user.name }}</h1>
-  <h2 class="animate-fadeIn text-xl mb-5 font-light text-center">{{ user.intro }}</h2>
-  <div class="animate-fadeIn container w-2/4 font-light text-xl ml-auto mr-auto px-3 py-3 bg-teal-400">
-    <h3 class="animate-fadeIn">{{ user.bio }}</h3>
+  <div class=" intro mt-5">
+    {% for user in all_users %}
+      <h1 class="animate-fadeIn text-3xl text-white font-light ml-10 mb-5">{{ user.name }}</h1>
+      <h2 class="animate-fadeIn text-xl mb-5 text-white  font-light ml-10">{{ user.intro }}</h2>
+      <div class="animate-fadeIn container w-2/4 font-light text-xl ml-5 mr-auto px-3 py-3 0">
+        <h3 class="animate-fadeIn text-white">{{ user.bio }}</h3>
+      </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
-
-<style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 2s ease-in-out;
-  }
-
-  .animate-fadeOut {
-    animation: fadeOut 2s ease-in-out;
-  }
-</style>
-
+  <div class="sliding-container rounded-md mr-5 ml-30 mt-5">
+    <h2>USER PROFILE PHOTO</h2>
+    <p>IMAGE SECTION</p>
+  </div>
 {% endblock %}
