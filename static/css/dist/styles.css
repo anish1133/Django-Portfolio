@@ -52,24 +52,28 @@
   font-size: 1.4rem;
 }
 .devman {
-  color: var(--color-button-hover) !important;
-  font-size: 1.6rem !important;
+  color: var(--color-button-hover) ;
+  font-size: 1.2rem ;
   display: flex;
-  justify-content: center;
-  margin-bottom: 0 !important;
+  justify-content: start;
+  margin-bottom: 0 ;
 
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   align-items: center;
-  font-weight: 800 !important;
+  font-weight: 800;
 }
 .devman span {
-  color: rgb(248,131,130);
+  color: rgb(200,342,234);
   margin-left:10px;
-  margin-top:10px;
 }
 .devman img {
-  width: 30px;
+  width: 25px;
+  margin-left:10px;
   margin-right: 5px;
+}
+.time-container{
+  margin-left:1px;
+  color:white;
 }
 @keyframes blink-animation {
   to {
@@ -87,12 +91,14 @@
       height: 60vh;
       position:relative; 
       margin-left:30px;
-      margin-bottom :30px;
+      margin-bottom :10px;
       /* padding-right:5px; */
 
   }
   .intro{
     position:relative;
+    width:150vh;
     font-size:30px;
+    margin-bottom:10px;
   }
 }
