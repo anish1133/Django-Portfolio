@@ -1,17 +1,14 @@
 from django.views.generic import ListView
-from . import models
 from django.utils import timezone
+from .models import UserDetails
 
 
 class UserHome(ListView):
-    """Here all the UserHome class definition is done"""
-
-    model = models.UserDetails
+    model = UserDetails
+    template_name = "portfolio/userdetails_list.html"  # Adjust the path based on your project structure
     context_object_name = "User"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        utc_time = timezone.now()
-        ist_time = utc_time.astimezone(timezone.get_current_timezone())
-        context["ist_time"] = ist_time
+        context["ist_time"] = timezone.now().astimezone(timezone.get_current_timezone())
         return context
