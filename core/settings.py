@@ -41,6 +41,8 @@ DJANGO_APPS = [
     "tailwind",
     "theme",
     "django_browser_reload",
+    "ckeditor",
+    "ckeditor_uploader",
 ]
 PROJECT_APPS = ["portfolio.apps.PortfolioConfig"]
 
@@ -124,6 +126,10 @@ TIME_ZONE = "Asia/Kolkata"
 USE_I18N = True
 
 USE_TZ = True
+
+
+# Ck editor Upload Path
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 # Static files (CSS, JavaScript, Images)

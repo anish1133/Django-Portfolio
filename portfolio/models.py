@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class UserDetails(models.Model):
@@ -7,8 +8,6 @@ class UserDetails(models.Model):
     bio = models.TextField(default="", blank=True)
     job_title = models.CharField(max_length=100, blank=True, null=True)
     avatar = models.ImageField(upload_to="", blank=True)
-    resume_link = models.URLField(blank=True, null=True)
-    hire_me = models.CharField(max_length=255, default="Hire Me")
 
     class Meta:
         verbose_name_plural = "User Section"
@@ -18,18 +17,18 @@ class UserDetails(models.Model):
 
 
 class AboutMe(models.Model):
-    title = models.CharField(max_length=20, blank=True, null=True)
-    title_2 = models.CharField(max_length=100, blank=True, null=True)
-    description_one = models.TextField(max_length=100, blank=True, null=True)
-    about_avatar = models.CharField(
-        max_length=100, blank=True, null=True, verbose_name="Google Drive Image Id"
-    )
+    Education1 = RichTextField(blank=True, null=True)
+    Education2 = RichTextField(blank=True, null=True)
+    Education3 = RichTextField(blank=True, null=True)
+    Achievements = models.CharField(max_length=200, blank=True, null=True)
+    resume = models.URLField(blank=True, null=True)
+    hire_me = models.CharField(max_length=255, default="Hire Me")
 
     class Meta:
         verbose_name_plural = "About Me Section"
 
     def __str__(self):
-        return self.title
+        return self.Education1
 
 
 class ServicesOffered(models.Model):

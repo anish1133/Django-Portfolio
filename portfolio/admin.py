@@ -11,18 +11,18 @@ class ItemUser(admin.ModelAdmin):
         "bio",
         "job_title",
         "avatar",
-        "resume_link",
-        "hire_me",
     )
 
 
 @admin.register(models.AboutMe)
 class About(admin.ModelAdmin):
     list_display = (
-        "title",
-        "title_2",
-        "description_one",
-        "about_avatar",
+        "Education1",
+        "Education2",
+        "Education3",
+        "Achievements",
+        "resume",
+        "hire_me",
     )
 
 
