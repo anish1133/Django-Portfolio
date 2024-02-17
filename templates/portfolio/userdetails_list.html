@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}Pravin Kumar{% endblock %}
 {% block content %}
-  <div class="mx-10 my-10">
-    <div class=" intro mt-5">
-      {% for user in User %}
+  {% for user in User %}
+    {% include 'portfolio/nav.html' %}
+    <div class="mx-10 my-10">
+      <div class=" intro mt-5">
         <h1 class="animate-fadeIn text-3xl text-white font-light ml-10 mb-5">{{ user.name }}</h1>
         <h2 class="animate-fadeIn text-xl text-white  font-light ml-10">{{ user.intro }}</h2>
         <div class="animate-fadeIn container w-2/4 font-light text-xl ml-5 mr-auto px-3 py-3 0">

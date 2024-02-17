@@ -5,6 +5,7 @@ from ckeditor.fields import RichTextField
 class UserDetails(models.Model):
     intro = models.CharField(max_length=30, blank=True, verbose_name="Introduction")
     name = models.CharField(max_length=50)
+    dev_domain = models.CharField(max_length=50, blank=True)
     bio = models.TextField(default="", blank=True)
     job_title = models.CharField(max_length=100, blank=True, null=True)
     avatar = models.ImageField(upload_to="", blank=True)

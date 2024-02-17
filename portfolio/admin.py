@@ -11,6 +11,7 @@ class ItemUser(admin.ModelAdmin):
         "bio",
         "job_title",
         "avatar",
+        "dev_domain",
     )
 
 
