@@ -2,28 +2,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% tailwind_css %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/ca547ebe4a.js"
-            crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-          rel="stylesheet" />
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-    <title>
-      {% block title %}Pravin Kumar{% endblock %}
-    </title>
-  </head>
-  <body class="bg-cover bg-fixed"
-        style="background-image: url(static/images/bg1.png)">
-    <header class="container max-w-full inset-0 flex items-center justify-between px-6 h-16  bg-purple-800 ">
-      <div>
-        {% block content %}{% endblock %}
-      </div>
-    </header>
-    <section>
-    </section>
-  </body>
+
+<head>
+  {% tailwind_css %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/ca547ebe4a.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <title>
+    {% block title %}Pravin Kumar{% endblock %}
+  </title>
+</head>
+
+<body class="bg-cover" style="background-image: url(static/images/bg1.png)">
+  <header class="container max-w-full h-14 bg-purple-800 ">
+    {% block content %}{% endblock %}
+  </header>
+</body>
+
 </html>
