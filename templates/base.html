@@ -10,6 +10,7 @@
   <script src="https://kit.fontawesome.com/ca547ebe4a.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
   <title>
     {% block title %}Pravin Kumar{% endblock %}
   </title>
@@ -17,7 +18,7 @@
 
 
 <body class="bg-cover min-h-screen" style="background-image: url(static/images/bg1.png)">
-  <header class="container fixed -mt-10 z-20  max-w-full h-14 bg-blue-900">
+  <header class="container fixed animate-fadeIn  z-20  max-w-full h-14 bg-blue-900">
     {% include 'portfolio/nav.html' %}
   </header>
 

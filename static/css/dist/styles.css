@@ -1,6 +1,41 @@
+.color{
+  transition:background-color 1s;
+  background:#0c0150;
+  border-radius:100px;
+}
+.color:hover{
+  background:#E75480;
+  border-radius:100px;
+  transition:background-color 1s;
+  color:black;
+}
 .intro{
   position:relative;
   padding-right:10px;
+}
+
+@keyframes abd {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-abd:hover{
+    animation: abd 1s linear infinite;
+}
+
+
+@keyframes dab {
+    0%, 100% {
+        transform: translateY(-10%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+.animate-dab {
+    animation: dab 1s infinite;
 }
 @keyframes fadeIn{
   from {
@@ -29,7 +64,7 @@
 
 @keyframes slideIn {
     from {
-      transform: translateY(200%);
+      transform: translateY(50%);
     }
     to {
       transform: translateY(0);
@@ -77,6 +112,7 @@
   margin-left:1px;
   color:white;
 }
+
 @keyframes blink-animation {
   to {
     visibility: hidden;
