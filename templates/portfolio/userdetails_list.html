@@ -3,16 +3,15 @@
 <div class="container max-w-full relative ">
   {% for user in User %}
   <div class=" flex ml-10 ">
-    <div class=" intro mt-20">
+    <div class=" intro mt-16">
       <h1 class="animate-fadeIn text-3xl text-white font-light ml-10 mb-5">{{ user.name }}</h1>
       <h2 class="animate-fadeIn text-xl text-white  font-light ml-10 ">{{ user.intro }}</h2>
-      <div class="animate-fadeIn container w-3/5 font-light text-xl ml-6 px-3 py-3 ">
+      <div class="animate-fadeIn container h-1/2 w-3/4 font-light text-xl ml-6 px-3 py-1 -mb-5 ">
         <h3 class="animate-fadeIn text-base text-white">{{ user.bio }}</h3>
       </div>
-      <div class="ml-8 mt-10">
+      <div class="ml-8 mt-20">
         <span class="max-w-full py-4 text-lg font-light animate-dab text-white w-1/5 text-center block color">
-          Hire Me
-          <i class="fa-solid fa-arrow-right"></i>
+          <a href="mailto:{{user.hire_me}}">Hire Me </a><i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </div>
@@ -20,9 +19,9 @@
       style="background-image:url({{ user.avatar.url }})"></div>
   </div>
   {% endfor %}
-  <div class="flex flex-row mx-16 mt-4 ">
+  <div class="flex flex-row mx-16  ">
     {% for o in obj %}
-    <div class="flex flex-col hover:text-black hover:shadow-sm text-gray-50 py-2 px-3 rounded-md">
+    <div class="flex flex-col hover:text-black hover:shadow-sm text-gray-50 ml-2 py-2 px-3 rounded-md">
       <span class="animate-fadeIn"><a href="{{ o.link }}" alt="{{ o.name }}"><i
             class="{{ o.social_icon }} text-3xl "></i></span></a>
     </div>
