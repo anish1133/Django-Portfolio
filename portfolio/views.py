@@ -15,7 +15,19 @@ class UserHome(ListView):
         context = super().get_context_data(**kwargs)
 
         context["ist_time"] = timezone.now().astimezone(timezone.get_current_timezone())
+        context["user1"] = UserDetails.objects.all()
         context["obj"] = SocialMediaLinks.objects.all()
+        return context
+
+
+class AboutView(ListView):
+    model = AboutMe
+    template_name = "portfolio/about.html"
+    context_object_name = "about"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["about"] = AboutMe.objects.all()
         return context
 
 

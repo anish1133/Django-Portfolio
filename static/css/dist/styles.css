@@ -1,3 +1,6 @@
+.txt-col{
+  color:#0c0150
+}
 .color{
   transition:background-color 1s;
   background:#0c0150;
@@ -84,6 +87,7 @@
   }
 
 .blink {
+  animation: fadeIn 1.5s ease-in-out;
   animation: blink-animation 2s steps(5, start) infinite;
   -webkit-animation: blink-animation 2s steps(5, start) infinite;
   font-size: 1.4rem;

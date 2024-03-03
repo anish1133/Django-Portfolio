@@ -11,7 +11,7 @@
       </div>
       <div class="ml-8 mt-20">
         <span class="max-w-full py-4 text-lg font-light animate-dab text-white w-1/5 text-center block color">
-          <a href="mailto:{{user.hire_me}}">Hire Me </a><i class="fa-solid fa-arrow-right"></i>
+          <a href="mailto:{{ user.hire_me }}">Hire Me </a><i class="fa-solid fa-arrow-right"></i>
         </span>
       </div>
     </div>
@@ -19,6 +19,7 @@
       style="background-image:url({{ user.avatar.url }})"></div>
   </div>
   {% endfor %}
+  <span class="ml-20 animate-fadeIn  pl-1 txt-col font-extralight text-lg">Connect Me:</span>
   <div class="flex flex-row mx-16  ">
     {% for o in obj %}
     <div class="flex flex-col hover:text-black hover:shadow-sm text-gray-50 ml-2 py-2 px-3 rounded-md">
@@ -26,6 +27,14 @@
             class="{{ o.social_icon }} text-3xl "></i></span></a>
     </div>
     {% endfor %}
+    <div class="mb-5">
+      <a href="https://drive.google.com/file/d/1CidG3izkGuweCdSgWS7TTodouAutrGgp/view?usp=drive_link">
+
+        <span
+          class="max-w-full animate-fadeIn  py-2 text-base font-light text-white w-32 my-1 ml-5  text-right pr-7 block color"><i
+            class="fa-solid fa-download"></i> Resume</span>
+      </a>
+    </div>
   </div>
 </div>
-{% endblock %}
+{% endblock content %}

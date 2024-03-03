@@ -10,6 +10,7 @@ class UserDetails(models.Model):
     job_title = models.CharField(max_length=100, blank=True, null=True)
     avatar = models.ImageField(upload_to="", blank=True)
     hire_me = models.CharField(max_length=255, default="Hire Me", null=True)
+    resume = models.URLField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = "User Section"
