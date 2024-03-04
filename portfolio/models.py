@@ -20,11 +20,58 @@ class UserDetails(models.Model):
 
 
 class AboutMe(models.Model):
-    Education1 = RichTextField(blank=True, null=True)
-    Education2 = RichTextField(blank=True, null=True)
-    Education3 = RichTextField(blank=True, null=True)
-    Achievements = models.CharField(max_length=200, blank=True, null=True)
-    resume = models.URLField(blank=True, null=True)
+    """This class contains all the school degree and college degree section"""
+
+    """Education-1"""
+    branch = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg: computer science"
+    )
+    college = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg: IIT Delhi"
+    )
+    college_description = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg: about the college"
+    )
+    duration = models.CharField(
+        max_length=50, blank=True, null=True, help_text="eg: 2021-2025"
+    )
+    college_location = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg: Delhi"
+    )
+    country = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg:India"
+    )
+    """Education-2"""
+    school = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg:DPS RK puram"
+    )
+    stream = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg:Pure Science"
+    )
+    school_location = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg:Delhi"
+    )
+    duration1 = models.CharField(
+        max_length=50, blank=True, null=True, help_text="eg: 2018-2020"
+    )
+    grade = models.CharField(max_length=50, blank=True, help_text="eg: 77.6%")
+    """Education-3"""
+    school1 = models.CharField(
+        max_length=300, blank=True, null=True, help_text="For Matriculation Section"
+    )
+    stream1 = models.CharField(max_length=300, blank=True, null=True, help_text="eg:")
+    duration2 = models.CharField(max_length=50, blank=True, null=True, help_text="eg:")
+    school_location1 = models.CharField(
+        max_length=300, blank=True, null=True, help_text="eg:"
+    )
+    grade1 = models.CharField(max_length=50, blank=True, help_text="eg:")
+    Achievements = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+        help_text="eg: your achievements till date",
+    )
+    resume = models.URLField(blank=True, null=True, help_text="google drive link")
 
     class Meta:
         verbose_name_plural = "About Me Section"

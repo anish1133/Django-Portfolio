@@ -18,7 +18,14 @@ class ItemUser(admin.ModelAdmin):
 
 @admin.register(models.AboutMe)
 class About(admin.ModelAdmin):
-    list_display = ("resume",)
+    list_display = (
+        "branch",
+        "college",
+        "college_description",
+        "college_location",
+        "country",
+        "resume",
+    )
 
 
 @admin.register(models.ServicesOffered)
