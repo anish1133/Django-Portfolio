@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.contrib.postgres.fields import ArrayField
 
 
 class UserDetails(models.Model):
@@ -41,6 +42,9 @@ class AboutMe(models.Model):
     country = models.CharField(
         max_length=300, blank=True, null=True, help_text="eg:India"
     )
+    grade_col = models.CharField(
+        max_length=10, blank=True, null=True, help_text="your cgpa"
+    )
     """Education-2"""
     school = models.CharField(
         max_length=300, blank=True, null=True, help_text="eg:DPS RK puram"
@@ -54,7 +58,7 @@ class AboutMe(models.Model):
     duration1 = models.CharField(
         max_length=50, blank=True, null=True, help_text="eg: 2018-2020"
     )
-    grade = models.CharField(max_length=50, blank=True, help_text="eg: 77.6%")
+    grade1 = models.CharField(max_length=50, blank=True, help_text="eg: 77.6%")
     """Education-3"""
     school1 = models.CharField(
         max_length=300, blank=True, null=True, help_text="For Matriculation Section"
@@ -64,8 +68,26 @@ class AboutMe(models.Model):
     school_location1 = models.CharField(
         max_length=300, blank=True, null=True, help_text="eg:"
     )
-    grade1 = models.CharField(max_length=50, blank=True, help_text="eg:")
-    Achievements = models.CharField(
+    grade2 = models.CharField(max_length=50, blank=True, help_text="eg:")
+    Achievement1 = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+        help_text="eg: your achievements till date",
+    )
+    Achievement2 = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+        help_text="eg: your achievements till date",
+    )
+    Achievement3 = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+        help_text="eg: your achievements till date",
+    )
+    Achievement4 = models.CharField(
         max_length=200,
         blank=True,
         null=True,
@@ -77,7 +99,7 @@ class AboutMe(models.Model):
         verbose_name_plural = "About Me Section"
 
     def __str__(self):
-        return self.Achievements
+        return self.branch
 
 
 class ServicesOffered(models.Model):

@@ -1,5 +1,8 @@
 .txt-col{
-  color:#0c0150
+  color:#0c0150;
+}
+.card{
+  background:#0c0150;
 }
 .color{
   transition:background-color 1s;
@@ -81,7 +84,6 @@
     right: 0;
     width: 500px; 
     height: 50vh; 
-    background-color: #f0f0f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     animation: slideIn 1.5s ease-in-out; 
   }

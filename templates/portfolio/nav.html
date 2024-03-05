@@ -1,32 +1,30 @@
-{% block nav %}
 {% for user in User %}
-<div class="ml-1 flex flex-col">
-    <div class="blink devman text-xl mt-2 text-left">
-        <span class="text-left italic text-gray-200 font-light">{{ user.dev_domain }}</span>
-        <img src="https://code.google.com/images/developers.png" alt="eloper">
+    <div class="ml-1 flex flex-col">
+        <div class="blink devman text-xl mt-2 text-left">
+            <span class="text-left italic text-gray-200 font-light">{{ user.dev_domain }}</span>
+            <img src="https://code.google.com/images/developers.png" alt="eloper">
+        </div>
+        <div class="blink devman time-container">
+            <span class="text-xs italic -mt-1 font-extralight">{{ ist_time }}</span>
+        </div>
     </div>
-    <div class="blink devman time-container">
-        <span class="text-xs italic -mt-1 font-extralight">{{ ist_time }}</span>
-    </div>
-</div>
 {% endfor %}
 <div class="absolute top-0 right-0 mr-5">
     <ul class="flex flex-row space-x-6 mr-2 mt-4 text-gray-200 font-light text-base h-full items-center">
         <li>
-            <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}"> Home</a>
+            <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}">&nbsp;Home</a>
         </li>
         <li>
-            <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}"> About</a>
+            <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}">&nbsp;About</a>
         </li>
         <li>
-            <i class=" fa-solid fa-eye animate-fadeIn "></i> My Projects
+            <i class=" fa-solid fa-eye animate-fadeIn "></i>&nbsp;My Projects
         </li>
         <li>
-            <i class=" fa-solid fa-list-check animate-fadeIn "></i> Skills
+            <i class=" fa-solid fa-list-check animate-fadeIn "></i>&nbsp;Skills
         </li>
         <li>
-            <i class=" fa-solid fa-paper-plane animate-fadeIn "></i> Contact Me
+            <i class=" fa-solid fa-paper-plane animate-fadeIn "></i>&nbsp;Contact Me
         </li>
     </ul>
 </div>
-{% endblock nav %}
