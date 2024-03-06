@@ -1,6 +1,5 @@
 from django.db import models
 from ckeditor.fields import RichTextField
-from django.contrib.postgres.fields import ArrayField
 
 
 class UserDetails(models.Model):
@@ -153,27 +152,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.Project_title
-
-
-class MyContact(models.Model):
-    icon = models.CharField(
-        max_length=90, blank=True, null=True, verbose_name="Icon (eg: fa -fa-twitter)"
-    )
-    contact_info = models.CharField(
-        max_length=100,
-        blank=True,
-        null=True,
-        verbose_name="Contact Info (eg: johndoe2@gmail.com)",
-    )
-    social = models.CharField(
-        max_length=30, blank=True, null=True, verbose_name="Contact Name (eg: twitter)"
-    )
-
-    class Meta:
-        verbose_name_plural = "Contacts Section"
-
-    def __str__(self):
-        return self.contact_name
 
 
 class SocialMediaLinks(models.Model):

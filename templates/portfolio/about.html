@@ -1,86 +1,74 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container animate-fadeIn  flex flex-row  max-w-full relative pt-20">
-    <div class="text-4xl font-light px-10 text-white"><i class="fa-solid fa-award animate-pulse"></i>&nbsp;Education
-
-        <div class="px-20 pt-10">
-            {% for a in about %}
-            <div class="flex text-white font-light flex-col">
-                <span class="text-2xl -ml-6 py-2"><i
-                        class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{a.branch}}</span>
-                <span class="text-xl">{{a.college}}</span>
-                <span class="text-lg">{{a.college_description}}</span>
-                <span class="text-base">{{a.college_location}}</span>
-                <span class="text-base">{{a.country}}</span>
-                <div class="flex text-sm">
-                    <span class="text-sm pr-10">{{a.duration}}</span>
-                    {% if a.grade_col %}
-                    <span class="text-sm">CGPA:&nbsp;{{a.grade_col}}</span>
-                    {% endif %}
-                </div>
-
+    <div class="container animate-fadeIn  flex flex-row  max-w-full relative pt-20">
+        <div class="text-4xl font-light px-10 text-white">
+            <i class="fa-solid fa-award animate-pulse"></i>&nbsp;Education
+            <div class="px-20 pt-10">
+                {% for a in about %}
+                    <div class="flex text-white font-light flex-col">
+                        <span class="text-2xl -ml-6 py-2"><i class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{ a.branch }}</span>
+                        <span class="text-xl">{{ a.college }}</span>
+                        <span class="text-lg">{{ a.college_description }}</span>
+                        <span class="text-base">{{ a.college_location }}</span>
+                        <span class="text-base">{{ a.country }}</span>
+                        <div class="flex text-sm">
+                            <span class="text-sm pr-10">{{ a.duration }}</span>
+                            {% if a.grade_col %}<span class="text-sm">CGPA:&nbsp;{{ a.grade_col }}</span>{% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="px-20 pt-10">
-            {% for a in about %}
-            <div class="flex text-white font-light flex-col">
-                <span class="text-2xl -ml-6 py-2"><i
-                        class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{a.school}}</span>
-                <span class="text-xl">{{a.stream}}</span>
-                <span class="text-lg">{{a.school_location}}</span>
-                <span class="text-base">{{a.country}}</span>
-                <div class="flex text-sm">
-                    <span class="text-sm pr-10">{{a.duration1}}</span>
-                    {% if a.grade1 %}
-                    <span class="text-sm">Grade:&nbsp;{{a.grade1}}</span>
-                    {% endif %}
-                </div>
-
+            <div class="px-20 pt-10">
+                {% for a in about %}
+                    <div class="flex text-white font-light flex-col">
+                        <span class="text-2xl -ml-6 py-2"><i class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{ a.school }}</span>
+                        <span class="text-xl">{{ a.stream }}</span>
+                        <span class="text-lg">{{ a.school_location }}</span>
+                        <span class="text-base">{{ a.country }}</span>
+                        <div class="flex text-sm">
+                            <span class="text-sm pr-10">{{ a.duration1 }}</span>
+                            {% if a.grade1 %}<span class="text-sm">Grade:&nbsp;{{ a.grade1 }}</span>{% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="px-20 pt-10 pb-5">
-            {% for a in about %}
-            <div class="flex text-white font-light flex-col">
-                <span class="text-2xl -ml-6 py-2"><i
-                        class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{a.school}}</span>
-                <span class="text-lg">{{a.stream1}}</span>
-                <span class="text-base">{{a.country}}</span>
-                <div class="flex text-sm">
-                    <span class="text-sm pr-10">{{a.duration2}}</span>
-                    {% if a.grade2 %}
-                    <span class="text-sm">Grade:&nbsp;{{a.grade2}}</span>
-                    {% endif %}
-                </div>
-
+            <div class="px-20 pt-10 pb-5">
+                {% for a in about %}
+                    <div class="flex text-white font-light flex-col">
+                        <span class="text-2xl -ml-6 py-2"><i class="fa-solid fa-location-dot animate-dab  flex-row"></i>&nbsp;{{ a.school }}</span>
+                        <span class="text-lg">{{ a.stream1 }}</span>
+                        <span class="text-base">{{ a.country }}</span>
+                        <div class="flex text-sm">
+                            <span class="text-sm pr-10">{{ a.duration2 }}</span>
+                            {% if a.grade2 %}<span class="text-sm">Grade:&nbsp;{{ a.grade2 }}</span>{% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
-    {% for a in about %}
-    {% if a.Achievement1 %}
-    <div class="container w-1/4 mt-2 mx-auto py-auto px-auto">
-        <div class=" justify-start text-white flex flex-col mb-4">
-            <span class="text-3xl font-light pb-10 "><i class="fa-solid fa-shield animate-pulse"></i> Achievements
-            </span>
-        </div>
-        <div class="flex flex-col text-white text-base font-extralight">
+        {% for a in about %}
             {% if a.Achievement1 %}
-            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{a.Achievement1}}</span>
-            {% endif %}
-            {% if a.Achievement2 %}
-            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{a.Achievement2}}</span>
-            {% endif %}
-            {% if a.Achievement3 %}
-            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{a.Achievement3}}</span>
-            {% endif %}
-            {% if a.Achievement4 %}
-            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{a.Achievement4}}</span>
-            {% endif %}
+                <div class="container w-1/4 mt-2 mx-auto py-auto px-auto">
+                    <div class=" justify-start text-white flex flex-col mb-4">
+                        <span class="text-3xl font-light pb-10 "><i class="fa-solid fa-shield animate-pulse"></i> Achievements
+                        </span>
+                    </div>
+                    <div class="flex flex-col text-white text-base font-extralight">
+                        {% if a.Achievement1 %}
+                            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{ a.Achievement1 }}</span>
+                        {% endif %}
+                        {% if a.Achievement2 %}
+                            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{ a.Achievement2 }}</span>
+                        {% endif %}
+                        {% if a.Achievement3 %}
+                            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{ a.Achievement3 }}</span>
+                        {% endif %}
+                        {% if a.Achievement4 %}
+                            <span><i class="fa-solid fa-bullseye my-4 animate-dab "></i> &nbsp;{{ a.Achievement4 }}</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
-</div>
 {% endblock content %}

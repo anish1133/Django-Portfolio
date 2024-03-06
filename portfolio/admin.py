@@ -61,15 +61,6 @@ class Project_View(admin.ModelAdmin):
     )
 
 
-@admin.register(models.MyContact)
-class Contact(admin.ModelAdmin):
-    list_display = (
-        "icon",
-        "contact_info",
-        "social",
-    )
-
-
 @admin.register(models.SocialMediaLinks)
 class Social(admin.ModelAdmin):
     list_display = (
