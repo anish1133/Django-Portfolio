@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="pt-28">
-    <div class="container w-3/5 mx-auto py-10 flex flex-col rounded-md  shadow-2xl p-6 border-gray-400 animate-fadeIn">
+<div class="pt-20 pb-10">
+    <div
+        class="container :h-60  w-3/5 mx-auto py-10 flex flex-col rounded-md  shadow-2xl p-6 border-gray-400 animate-fadeIn">
         <div class="text-center flex flex-col text-white font-light text-3xl">
             <span class="text-base text-left font-medium text-green-400">I want to hear from you</span>
             <span class="pb-10">Contact Me</span>
         </div>
-        <form method="get" action="{% url 'portfolio:contact' %}">
+        <form method="post">
             {% csrf_token %}
             <input type="text" name="name"
                 class=" border border-gray-200 mr-2  rounded-md py-4 mb-5 font-light text-lg text-left px-4 border-solid focus:outline-none focus:border-gray-600"
@@ -21,7 +22,7 @@
                 class="w-full mb-5 border border-gray-200 rounded-md py-16 px-5 font-light text-lg text-left border-solid focus:outline-none focus:border-gray-600"
                 placeholder="Enter Your Message">
             <button
-                class="w-1/4 text-center rounded-md py-5 font-light text-lg animate-dab bg-red-400 text-white hover:bg-red-500">Send
+                class="w-1/4 text-center rounded-md py-5 font-light text-lg animate-dab bg-green-500 text-white hover:bg-green-700">Send
                 Message</button>
 
         </form>

@@ -147,3 +147,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Email
+EMAIL_HOST = "smtp-relay.brevo.com"
+EMAIL_PORT = "587"
+EMAIL_HOST_USER = os.environ.get("BREVO_USERNAME")
+EMAIL_HOST_PASSWORD = os.environ.get("BREVO_PASSWORD")

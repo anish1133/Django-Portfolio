@@ -11,6 +11,7 @@ class UserDetails(models.Model):
     avatar = models.ImageField(upload_to="", blank=True)
     hire_me = models.CharField(max_length=255, default="Hire Me", null=True)
     resume = models.URLField(blank=True, null=True)
+    email = models.CharField(max_length=50, blank=True)
 
     class Meta:
         verbose_name_plural = "User Section"

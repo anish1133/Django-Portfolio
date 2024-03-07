@@ -1,7 +1,8 @@
 from typing import Any
 from django.db.models.base import Model as Model
 from django.db.models.query import QuerySet
-from django.views.generic import ListView, DetailView, View
+from django.http import HttpResponse, HttpResponseRedirect
+from django.views.generic import ListView, DetailView, View, FormView
 from django.utils import timezone
 from .models import *
 from . import forms
@@ -32,6 +33,18 @@ class AboutView(ListView):
         return context
 
 
-def contactMe(request):
-    form = forms.ContactForm()
-    return render(request, "portfolio/contact.html", {"form": form})
+class SendMessage(FormView):
+    template_name = "portfolio/contact.html"
+    form_class = forms.ContactForm
+    success_url = "/"
+
+    def form_valid(self, form):
+        name = form.cleaned_data["name"]
+        email = form.cleaned_data["email"]
+        Subject = form.cleaned_data["Subject"]
+        message = form.cleaned_data["message"]
+
+        print(f"Name: {name}, Email: {email}, Subject: {Subject}, Message: {message}")
+        form.save()
+
+        return super().form_valid(form)

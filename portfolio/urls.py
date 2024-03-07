@@ -6,5 +6,6 @@ app_name = "portfolio"
 urlpatterns = [
     path("", portfolio_views.UserHome.as_view(), name="home"),
     path("about/", portfolio_views.AboutView.as_view(), name="about"),
-    path("contact/", portfolio_views.contactMe, name="contact"),
+    path("contact/", portfolio_views.SendMessage.as_view(), name="contact"),
+    path("contact/submit/", portfolio_views.SubmitMessage.as_view(), name="submit"),
 ]
