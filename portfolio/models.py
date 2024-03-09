@@ -121,7 +121,7 @@ class LanguagesSkills(models.Model):
     )
 
     icon = models.CharField(
-        max_length=100, blank=True, verbose_name="language Icon Image:(icons8.com)"
+        max_length=1000, blank=True, verbose_name="language Icon Image:(icons8.com)"
     )
     lang_name = models.CharField(
         max_length=100, blank=True, verbose_name="Language Name"

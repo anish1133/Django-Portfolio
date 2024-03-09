@@ -7,5 +7,5 @@ urlpatterns = [
     path("", portfolio_views.UserHome.as_view(), name="home"),
     path("about/", portfolio_views.AboutView.as_view(), name="about"),
     path("contact/", portfolio_views.SendMessage.as_view(), name="contact"),
-    path("contact/submit/", portfolio_views.SubmitMessage.as_view(), name="submit"),
+    path("skills/", portfolio_views.Skillsection.as_view(), name="skills"),
 ]

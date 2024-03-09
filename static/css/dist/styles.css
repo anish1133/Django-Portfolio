@@ -1,3 +1,6 @@
+.new-shadow{
+  transition:box-shadow 0.2s linear;
+}
 .txt-col{
   color:#0c0150;
 }

@@ -17,7 +17,9 @@ class UserHome(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context["ist_time"] = timezone.now().astimezone(timezone.get_current_timezone())
+        context["ist_time"] = timezone.now().astimezone(
+            timezone.get_current_timezone()
+        )  # type:ignore
         context["user1"] = UserDetails.objects.all()
         context["obj"] = SocialMediaLinks.objects.all()
         return context
@@ -48,3 +50,14 @@ class SendMessage(FormView):
         form.save()
 
         return super().form_valid(form)
+
+
+class Skillsection(ListView):
+    model = LanguagesSkills
+    template_name = "portfolio/skills.html"
+    context_object_name = "skills"
+
+    def get_context_data(self, **kwargs):
+        skill = LanguagesSkills.objects.all()
+        context = {"skill": skill}
+        return context

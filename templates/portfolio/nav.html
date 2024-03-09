@@ -12,20 +12,24 @@
 <div class="absolute top-0 right-0 mr-5">
     <ul class="flex flex-row space-x-6 mr-2 mt-4 text-gray-200 font-light text-base h-full items-center">
         <li>
-            <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}">&nbsp;Home</a>
+            <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}"><span
+                    class="py-5 px-3">Home</a></span>
         </li>
         <li>
-            <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}">&nbsp;About</a>
+            <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}"><span
+                    class="py-5 px-3">About</a></span>
         </li>
         <li>
-            <i class=" fa-solid fa-eye animate-fadeIn "></i>&nbsp;My Projects
+            <i class=" fa-solid fa-eye animate-fadeIn "></i><a href="{% url 'portfolio:skills' %}"></a><span
+                class="py-5 px-3">My Projects</span>
         </li>
         <li>
-            <i class=" fa-solid fa-list-check animate-fadeIn "></i>&nbsp;Skills
+            <i class=" fa-solid fa-list-check animate-fadeIn "></i><a href="{% url 'portfolio:skills' %}"><span
+                    class="py-5 px-3">Skills</a></span>
         </li>
         <li>
-            <i class=" fa-solid fa-paper-plane animate-fadeIn "></i><a
-                href="{% url 'portfolio:contact' %}">&nbsp;Contact Me</a>
+            <i class=" fa-solid fa-paper-plane animate-fadeIn "></i><a href="{% url 'portfolio:contact' %}"><span
+                    class="py-5 px-3">Contact Me</a></span>
         </li>
     </ul>
 </div>

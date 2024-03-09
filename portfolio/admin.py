@@ -41,8 +41,6 @@ class Display_Service(admin.ModelAdmin):
 @admin.register(models.LanguagesSkills)
 class Skills(admin.ModelAdmin):
     list_display = (
-        "EXP_CHOICES",
-        "icon",
         "lang_name",
         "exp_level",
     )
