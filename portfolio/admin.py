@@ -69,4 +69,7 @@ class Social(admin.ModelAdmin):
 
 @admin.register(models.ProjectPhotos)
 class displayphotos(admin.ModelAdmin):
-    list_display = ("Project_Image",)
+    list_display = (
+        "page_details",
+        "Project_Image",
+    )

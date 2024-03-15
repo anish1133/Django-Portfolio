@@ -181,6 +181,3 @@ class ProjectPhotos(models.Model):
 
     class Meta:
         verbose_name_plural = "Project Photos"
-
-        def __str__(self):
-            return self
