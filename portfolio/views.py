@@ -61,3 +61,15 @@ class Skillsection(ListView):
         skill = LanguagesSkills.objects.all()
         context = {"skill": skill}
         return context
+
+
+class ShowProject(ListView):
+    model = Project
+    template_name = "portfolio/projects.html"
+    context_object_name = "project"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["Projects"] = Project.objects.all()
+        context["all_photos"] = ProjectPhotos.objects.all()
+        return context

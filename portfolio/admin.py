@@ -50,7 +50,6 @@ class Skills(admin.ModelAdmin):
 class Project_View(admin.ModelAdmin):
     list_display = (
         "language_used",
-        "Project_Image",
         "updated_on",
         "Project_title",
         "Project_info",
@@ -66,3 +65,8 @@ class Social(admin.ModelAdmin):
         "link",
         "social_icon",
     )
+
+
+@admin.register(models.ProjectPhotos)
+class displayphotos(admin.ModelAdmin):
+    list_display = ("Project_Image",)

@@ -139,12 +139,11 @@ class LanguagesSkills(models.Model):
 
 class Project(models.Model):
     language_used = models.CharField(max_length=100, blank=True, null=True)
-    Project_Image = models.ImageField(blank=True, null=True)
     updated_on = models.DateTimeField(
         auto_now_add=False, null=True, auto_now=True, blank=True
     )
     Project_title = models.CharField(max_length=90, blank=True, null=True)
-    Project_info = models.TextField(blank=True, null=True)
+    Project_info = RichTextField(blank=True, null=True)
     project_link = models.URLField(blank=True, null=True)
     live_link = models.URLField(blank=True, null=True)
 
@@ -167,3 +166,21 @@ class SocialMediaLinks(models.Model):
 
     def __str__(self):
         return self.social_icon
+
+
+class ProjectPhotos(models.Model):
+    project = models.ForeignKey(
+        Project, related_name="photos", on_delete=models.CASCADE, null=True
+    )
+    Project_Image = models.ImageField(
+        blank=True,
+        null=True,
+        upload_to="Project_SS",
+    )
+    page_details = models.CharField(null=True, max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Project Photos"
+
+        def __str__(self):
+            return self

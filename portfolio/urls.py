@@ -8,4 +8,5 @@ urlpatterns = [
     path("about/", portfolio_views.AboutView.as_view(), name="about"),
     path("contact/", portfolio_views.SendMessage.as_view(), name="contact"),
     path("skills/", portfolio_views.Skillsection.as_view(), name="skills"),
+    path("projects/", portfolio_views.ShowProject.as_view(), name="project"),
 ]
