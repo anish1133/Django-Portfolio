@@ -1,11 +1,46 @@
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.photo {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 .photocontainer{
   position: relative;
   width:1000px;
-  height:500px;
+  height:800px;
   background:#f5f5f5;
   border-radius:10px;
-  box-shadow:0 40px 50px #dbdbdb
+  box-shadow:0 40px 50px #dbdbdb;
 }
+
 .new-shadow{
   transition:box-shadow 0.2s linear;
 }
@@ -147,7 +182,7 @@
       position:relative; 
       margin-left:30px;
       margin-bottom :10px;
-      /* padding-right:5px; */
+
 
   }
   .intro{
