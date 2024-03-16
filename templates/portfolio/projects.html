@@ -1,19 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="py-20 px-20">
-    <div class="container">
-        {% for p in project %}
-        <h2 class="text-2xl py-4">{{ p.Project_title }}</h2>
-        <p>{{ p.Project_info | safe }}</p>
-        {% endfor %}
-    </div>
-    <div class="container">
-        <div class="slideshow-container">
-
-            {% for photo in all_photos %}
-            <img class="relative" src="{{ photo.Project_Image.url }}" alt="Project Image">
-            {% endfor %}
+<div class="container py-10 pl-10  box-content">
+    {% for p in project %}
+    <div class="flex-col px-4">
+        <div class="container text-white w-3/4  max-w-full bg py-10">
+            <div class="project-info">
+                <h2 class="text-4xl font-medium pt-10 pb-16">{{ p.Project_title }}</h2>
+                <span class="ml-10">
+                    <p>{{ p.Project_info | safe }}</p>
+                </span>
+            </div>
+        </div>
+        <div class="photocontainer pb-20">
+            <div class="slide">
+                {% for photo in all_photos %}
+                {% if photo.project == p %}
+                <div class="item py-2 px-1 bg-cover" style="background-image: url({{photo.Project_Image.url}});">
+                    <div class="content">
+                        <div class="name">{{ p.page_details }}</div> <!-- Adjusted to use project title -->
+                        <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
+    {% endfor %} <!-- Moved the endfor here -->
 </div>
 {% endblock content %}
