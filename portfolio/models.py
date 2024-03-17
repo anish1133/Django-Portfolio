@@ -177,7 +177,7 @@ class ProjectPhotos(models.Model):
         null=True,
         upload_to="Project_SS",
     )
-    page_details = models.CharField(null=True, max_length=100)
+    page_details = models.CharField(null=True, max_length=100, blank=True)
 
     class Meta:
         verbose_name_plural = "Project Photos"

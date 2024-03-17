@@ -14,7 +14,7 @@
                 </span>
             </div>
         </div>
-        <div class="container animate-fadeIn pt-5 photocontainer pb-5 h-max">
+        <div class="container animate-fadeIn photocontainer pb-5 h-max">
             <div class="slider flex flex-row bg-cover">
                 {% for photo in all_photos %}
                 {% if photo.project == p %}
@@ -45,7 +45,7 @@
         var timer = setInterval(function () {
             slideIndex += 1;
             showSlidesWithAnimation();
-        }, 4000);
+        }, 2000);
         function showSlides() {
             var slides = $(".photo");
             if (slideIndex >= slides.length) {
