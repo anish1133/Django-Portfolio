@@ -1,5 +1,5 @@
 {% for user in User %}
-    <div class="ml-1 flex flex-col">
+    <div class="ml-1 flex flex-col nav-box-before " id="nav-box">
         <div class="blink devman text-xl mt-2 text-left">
             <span class="text-left italic text-gray-200 font-light">{{ user.dev_domain }}</span>
             <img src="https://code.google.com/images/developers.png" alt="eloper">
@@ -9,22 +9,27 @@
         </div>
     </div>
 {% endfor %}
-<div class="absolute top-0 right-0 mr-5">
+<div class=" nav-items absolute top-0 right-0 mr-5">
     <ul class="flex flex-row space-x-6 mr-2 mt-4 text-gray-200 font-light text-base h-full items-center">
-        <li>
-            <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}"><span class="py-5 px-3">Home</a></span>
-        </li>
-        <li>
-            <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}"><span class="py-5 px-3">About</a></span>
-        </li>
-        <li>
-            <i class=" fa-solid fa-eye animate-fadeIn "></i><a href="{% url 'portfolio:project' %}"><span class="py-5 px-3">My Projects</span></a>
-        </li>
-        <li>
-            <i class=" fa-solid fa-list-check animate-fadeIn "></i><a href="{% url 'portfolio:skills' %}"><span class="py-5 px-3">Skills</a></span>
-        </li>
-        <li>
-            <i class=" fa-solid fa-paper-plane animate-fadeIn "></i><a href="{% url 'portfolio:contact' %}"><span class="py-5 px-3">Contact Me</a></span>
-        </li>
+        <input type="checkbox" id="check">
+        <span class="menu">
+            <li>
+                <i class="fa-solid fa-house animate-fadeIn "></i><a href="{% url 'portfolio:home' %}"><span class="py-5 px-3">Home</a></span>
+            </li>
+            <li>
+                <i class=" fa-solid fa-user animate-fadeIn "></i><a href="{% url 'portfolio:about' %}"><span class="py-5 px-3">About</a></span>
+            </li>
+            <li>
+                <i class=" fa-solid fa-eye animate-fadeIn "></i><a href="{% url 'portfolio:project' %}"><span class="py-5 px-3">My Projects</span></a>
+            </li>
+            <li>
+                <i class=" fa-solid fa-list-check animate-fadeIn "></i><a href="{% url 'portfolio:skills' %}"><span class="py-5 px-3">Skills</a></span>
+            </li>
+            <li>
+                <i class=" fa-solid fa-paper-plane animate-fadeIn "></i><a href="{% url 'portfolio:contact' %}"><span class="py-5 px-3">Contact Me</a></span>
+            </li>
+            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
     </ul>
 </div>
