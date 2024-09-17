@@ -359,6 +359,7 @@ width: 100%;
       transform: translateX(0);
     }
   }
+}
 
 @media (max-width:480px){
  
@@ -442,5 +443,121 @@ width: 100%;
   
 }
 
+/* ********************************************About Section***************************************************** */
+@media(max-width:1500px){
+  .about-wrapper{
+    width: 100vw;
+   display: flex;
+   flex-direction: row;
+   gap: 6rem;
+   margin-left: 5rem;
+   transition: all 0.5s ease-in-out;
+  }
+
+  .education-box{ margin-top: 2rem;
+    margin-left: 5rem;
+  width: 100%;
+  }
+  .achievement-box{ 
+    margin-top: 2rem;
+    padding-right: 2rem;
+    width: 100%;}
+
+  .achievement-box .box2{
+     margin-left: 2rem;
+     text-align: justify;
+  }
+} 
+
+@media(max-width:1280px){
+  .about-wrapper{
+    width: 100vw;
+   display: flex;
+   flex-direction: row;
+   margin: 0 2rem; 
+   gap: 4rem;
+   transition: all 0.5s ease-in-out;
+  }
+
+  .education-box{
+    margin-left: 4rem;
+    width: 100%;
+ 
+  }
+  .education-box span{
+    text-align:justify;
+  }
+  .achievement-box{ 
+    padding-right: 2rem;
+    width: 100%;}
+
+  .achievement-box .box2{
+     margin-left: 2rem;
+     text-align: justify;
+  }
+   
+}
+
+@media(max-width:1024px){
+  .about-wrapper{
+   display: flex;
+   flex-direction: row; 
+   width: 100vw;
+   gap: 1rem;
+   transition: all 0.5s ease-in-out;
+  }
+  .education-box{
+    margin-left: -1rem;
+    width: 100%;
+ 
+  }  
+  .education-box span{  
+    text-align:left;
+  }
+  .achievement-box{
+    padding-right: 2rem;
+    width: 100%;
+  }
+
+
+ 
+}
+
+@media (max-width:900px ) {
+  .about-wrapper{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    height:  auto;
+    width: 100vw;
+    padding: 2rem;
+    transition: all 0.5s ease-in-out;
+   }
+   
+  .education-box{
+    width: 100%;
+ 
+  }  
+  .education-box span{ 
+    text-align:left;
+  }
+  .achievement-box{ 
+   
+    width: 100%;
+  }
   
 }
+
+@media(max-width:368px) {
+  .about-wrapper .education-box .achievement-box{
+    width: 100%;
+    line-height: 2rem;
+  }
+  .about-wrapper span{
+    width: 100%;
+    margin: 0;
+  }
+}
+ 
